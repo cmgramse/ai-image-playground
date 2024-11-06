@@ -11,7 +11,11 @@ export async function GET(request: NextRequest) {
   const model = request.nextUrl.searchParams.get("model");
   if (!model) return new Response("Model not specified", { status: 400 });
 
-  const env = getRequestContext().env;
+  const ctx = getRequestContext();
+  if (!ctx) {
+    return new Response("Request context is undefined", { status: 500 });
+  }
+  const env = ctx.env;
   const { CLOUDFLARE_ACCOUNT_ID: account_id, CLOUDFLARE_API_TOKEN } = env;
 
   const client = new Cloudflare({

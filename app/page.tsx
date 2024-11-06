@@ -1,5 +1,9 @@
-import ImageGenerator from "@/components/ImageGenerator";
+import ImageGenerator from "@/components/ImageGenerator"
 
 export default function Home() {
-  return <ImageGenerator />;
+  return (
+    <main>
+      <ImageGenerator />
+    </main>
+  )
 }

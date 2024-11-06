@@ -8,4 +8,12 @@ pages_build_output_dir = ".vercel/output/static"
 binding = "AI"
 
 [vars]
-CLOUDFLARE_ACCOUNT_ID = "dc56444c4c955a1653106ccf997c1067"
+CLOUDFLARE_ACCOUNT_ID = "306bfd5173a32fd21d6fd02147fd76dc"
+
+[[kv_namespaces]]
+binding = "image_generation_sessions"
+id = "95916a44eb3f4a26b92698e3a5dd00cc"
+preview_id = "d1ff8c97b437439fbc1a7198ba75c821"
+
+[deployment]
+cleanup = true

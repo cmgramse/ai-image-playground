@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+}

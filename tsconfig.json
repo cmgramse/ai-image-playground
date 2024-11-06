@@ -22,7 +22,8 @@
     },
     "types": [
         "@cloudflare/workers-types/2023-07-01"
-    ]
+    ],
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["next-env.d.ts", "env-d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

@@ -16,6 +16,8 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  max-width: 30em;
+  word-break: break-word;
 }
 
 .description a {
@@ -52,6 +54,8 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .card span {
@@ -70,7 +74,7 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
-  text-wrap: balance;
+  /* Removed text-wrap: balance; */
 }
 
 .center {
@@ -108,6 +112,17 @@
 .logo {
   position: relative;
 }
+/* dark mode logo */
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -185,6 +200,7 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
+    -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
   }
 
@@ -207,16 +223,6 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
